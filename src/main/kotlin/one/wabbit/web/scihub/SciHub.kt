@@ -1,8 +1,8 @@
 package one.wabbit.web.scihub
 
-import io.ktor.client.*
-import io.ktor.client.request.*
-import io.ktor.client.statement.*
+import io.ktor.client.HttpClient
+import io.ktor.client.request.get
+import io.ktor.client.statement.bodyAsText
 import org.jsoup.Jsoup
 
 object SciHub {
@@ -13,9 +13,10 @@ object SciHub {
 
     suspend fun getAvailableSciHubUrls(httpClient: HttpClient): Set<String> {
         val urls = mutableSetOf<String>()
-        val res = httpClient.get("https://sci-hub.ru/mirrors") {
-            // empty
-        }
+        val res =
+            httpClient.get("https://sci-hub.ru/mirrors") {
+                // empty
+            }
         val jsoup = Jsoup.parse(res.bodyAsText())
         val aTags = jsoup.select("a[href]")
         for (a in aTags) {
