@@ -32,7 +32,8 @@ publishing {
 }
 
 dependencies {
-    implementation("com.github.wabbit-corp:kotlin-pprint:1.0.0")
+    implementation("one.wabbit:kotlin-pprint:1.0.0")
+    implementation("one.wabbit:kotlin-web-common:1.1.0")
 
     testImplementation(kotlin("test"))
 
@@ -44,6 +45,7 @@ dependencies {
     implementation("io.ktor:ktor-client-content-negotiation:3.3.0")
     implementation("io.ktor:ktor-client-serialization:3.3.0")
     implementation("io.ktor:ktor-client-auth:3.3.0")
+    implementation("io.ktor:ktor-client-encoding:3.3.0")
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.7.1")
     implementation("org.jsoup:jsoup:1.21.2")
 }
