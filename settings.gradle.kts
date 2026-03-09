@@ -4,7 +4,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven("https://repo.papermc.io/repository/maven-public/")
+
     }
 }
 
@@ -12,7 +12,7 @@ pluginManagement {
     repositories {
         google()
         gradlePluginPortal()
-        maven("https://repo.papermc.io/repository/maven-public/")
+
     }
     plugins {
         id("org.jetbrains.kotlin.jvm") version "2.3.10"
@@ -32,22 +32,3 @@ pluginManagement {
         id("net.minecrell.plugin-yml.bukkit") version "0.6.0"
     }
 }
-
-include(":kotlin-pprint")
-project(":kotlin-pprint").projectDir = file("../kotlin-pprint")
-include(":kotlin-web-common")
-project(":kotlin-web-common").projectDir = file("../kotlin-web-common")
-include(":kotlin-data-ref")
-project(":kotlin-data-ref").projectDir = file("../kotlin-data-ref")
-include(":kotlin-data-need")
-project(":kotlin-data-need").projectDir = file("../kotlin-data-need")
-include(":kotlin-java-escape")
-project(":kotlin-java-escape").projectDir = file("../kotlin-java-escape")
-include(":kotlin-doc")
-project(":kotlin-doc").projectDir = file("../kotlin-doc")
-include(":kotlin-random-gen")
-project(":kotlin-random-gen").projectDir = file("../kotlin-random-gen")
-include(":kotlin-data")
-project(":kotlin-data").projectDir = file("../kotlin-data")
-include(":kotlin-base58")
-project(":kotlin-base58").projectDir = file("../kotlin-base58")

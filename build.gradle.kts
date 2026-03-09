@@ -3,6 +3,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 repositories {
     mavenCentral()
+
+    maven("https://jitpack.io")
 }
 
 group   = "one.wabbit"
@@ -30,8 +32,8 @@ publishing {
 }
 
 dependencies {
-    implementation(project(":kotlin-pprint")) // 1.0.0
-    implementation(project(":kotlin-web-common")) // 1.1.0
+    implementation("one.wabbit:kotlin-pprint:1.0.0")
+    implementation("one.wabbit:kotlin-web-common:1.1.0")
 
     testImplementation(kotlin("test"))
 
